@@ -14,6 +14,7 @@ const nextConfig = {
   // Add basePath and assetPrefix for GitHub Pages
   basePath: isGitHubPages ? `/${repo}` : '',
   assetPrefix: isGitHubPages ? `/${repo}/` : '',
+  trailingSlash: true, // Helps with static file serving
   images: {
     unoptimized: true, // Required for static export
     domains: ["raw.githubusercontent.com"],

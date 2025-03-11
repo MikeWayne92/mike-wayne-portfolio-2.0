@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production next build",
     "build:dev": "NODE_ENV=production BRANCH=dev next build",
     "start": "next start",
-    "export": "next export",
+    "export": "next export || next build && next export",
     "lint": "next lint",
     "lint:fix": "eslint --fix --ext ts,tsx app/ && prettier --write app/",
     "type-check": "tsc"
