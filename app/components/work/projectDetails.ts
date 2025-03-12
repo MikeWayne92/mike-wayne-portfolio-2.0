@@ -15,7 +15,9 @@ import {
     SiJavascript,
     SiNodedotjs,
     SiExpress,
-    SiSqlite
+    SiSqlite,
+    SiVite,
+    SiChartdotjs
 } from "react-icons/si";
 import {IconType} from "react-icons";
 
@@ -35,15 +37,15 @@ export type ProjectProps = {
 export const projects = [
     {
         id: 0,
-        name: "Eldora UI",
+        name: "Spotify by the Numbers",
         description:
-            "open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion. 100% open-source, and customizable.",
-        technologies: [SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiFramer],
-        techNames: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
-        techLinks: ["https://www.typescriptlang.org/", "https://reactjs.org/", "https://nextjs.org/", "https://tailwindcss.com/", "https://www.framer.com/motion/"],
-        github: "https://github.com/karthikmudunuri/eldoraui",
-        demo: "https://www.eldoraui.site/",
-        image: "/projects/eldoraui.png",
+            "A sleek, interactive dashboard for visualizing your Spotify listening history. Upload your Spotify data and get beautiful visualizations of your listening habits, including top artists, tracks, and listening patterns.",
+        technologies: [SiReact, SiTypescript, SiTailwindcss, SiFramer, SiVite, SiChartdotjs, SiGithub],
+        techNames: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Chart.js", "GitHub"],
+        techLinks: ["https://reactjs.org/", "https://www.typescriptlang.org/", "https://tailwindcss.com/", "https://www.framer.com/motion/", "https://vitejs.dev/", "https://www.chartjs.org/", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/Spotify-by-the-numbers",
+        demo: "https://github.com/MikeWayne92/Spotify-by-the-numbers",
+        image: "/projects/spotifydash.png",
         available: true,
     },
     {

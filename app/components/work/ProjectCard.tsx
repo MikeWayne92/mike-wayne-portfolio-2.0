@@ -86,8 +86,8 @@ const ProjectCard = ({
                 <div
                     className={`absolute text-white  ${
                         !(id % 2 === 0)
-                            ? "right-0 top-32 mr-0 ml-10 md:right-0 md:ml-0 lg:right-0 lg:top-60  lg:mr-4"
-                            : "left-10 top-32 ml-0 md:mr-12 lg:top-52 lg:ml-4"
+                            ? "right-0 top-20 mr-0 ml-10 md:right-0 md:ml-0 lg:right-0 lg:top-40 lg:mr-4"
+                            : "left-10 top-20 ml-0 md:mr-12 lg:top-36 lg:ml-4"
                     } mb-10  md:mb-16 lg:mb-14 `}
                 >
                     <AnimatedTitle
@@ -104,21 +104,23 @@ const ProjectCard = ({
                             "mt-4 w-[90%] max-w-[457px] text-[16px] font-semibold text-[#95979D] "
                         }
                     />
-                    <div className="mt-9 mb-9 grid grid-cols-5 gap-5 col-start-1 col-end-2">
-                        {technologies.map((IconComponent, id) => (
-                            <div key={id} className={"relative"}>
-                                <Link
-                                    href={techLinks[id]}
-                                    target="_blank"
-                                    aria-label={`Learn more about ${techNames[id]}`}
-                                    className="w-[20px] text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                                    title={techLinks[id]}
-                                    data-blobity-tooltip={techNames[id]}
-                                    data-blobity-magnetic="false"
-                                >
-                                    <IconComponent/>
-                                </Link>
-                            </div>
+                    <div className="mt-9 mb-9 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-4 col-start-1 col-end-2">
+                        {technologies.map((IconComponent, index) => (
+                            IconComponent ? (
+                                <div key={index} className={"relative"}>
+                                    <Link
+                                        href={techLinks[index]}
+                                        target="_blank"
+                                        aria-label={`Learn more about ${techNames[index]}`}
+                                        className="w-[20px] text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
+                                        title={techLinks[index]}
+                                        data-blobity-tooltip={techNames[index]}
+                                        data-blobity-magnetic="false"
+                                    >
+                                        <IconComponent/>
+                                    </Link>
+                                </div>
+                            ) : null
                         ))}
                     </div>
                 </div>

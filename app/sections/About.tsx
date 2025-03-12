@@ -21,16 +21,16 @@ const About = () => {
 
                 <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
                     <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16 lg:max-w-[90%] lg:text-[24px]">
-                        <AnimatedBody text="I'm a passionate developer with expertise in front-end and full-stack development. I have strong skills in JavaScript, React.js, Next.js, and modern HTML & CSS practices. I believe in continuously challenging myself and exploring new technologies to stay at the cutting edge of web development." />
+                        <AnimatedBody text="As a passionate developer, I bring a wealth of experience in front-end and full-stack development, with expertise in JavaScript, React.js, Next.js, and modern HTML & CSS. My commitment to innovation drives me to continuously learn and experiment with new technologies, ensuring that I deliver unique and cutting-edge solutions." />
 
                         <AnimatedBody
                             delay={0.1}
-                            text="Whether I'm designing a sleek user interface or coding a complex application, I'm always striving to create something unique and innovative. I love experimenting with new technologies and staying up-to-date with the latest trends in the tech world."
+                            text="Complementing my development skills, I have over two years of experience as an AI Data Operations Analyst, where I've supported AI/ML initiatives through data workflow optimization, quality assurance, and cross-functional collaboration. Proficient in SQL, Python, root cause analysis, and automation, I've improved data accuracy by 25% and operational efficiency by 30%."
                         />
 
                         <AnimatedBody
                             delay={0.2}
-                            text="Right now, I'm working on some exciting projects that I can't wait to share with you. But I'm always open to new opportunities and collaborations."
+                            text="This dual proficiency enables me to approach projects with a holistic view, combining creative problem-solving with data-driven decision-making. I'm currently working on exciting projects that utilize both aspects of my expertise and am always open to new opportunities and collaborations."
                         />
                     </div>
                 </div>
