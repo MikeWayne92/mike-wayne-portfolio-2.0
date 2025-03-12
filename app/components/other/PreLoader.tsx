@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import Logo from "../svg/Logo";
 import { GooeyText } from "./GooeyText";
 
 const PreLoader: React.FC = () => {
@@ -15,14 +14,6 @@ const PreLoader: React.FC = () => {
                 opacity: 1,
                 ease: "Power3.easeOut",
             })
-                .from(".logo-container", {
-                    duration: 1.5,
-                    delay: 1,
-                    y: 40,
-                    opacity: 0,
-                    scale: 0.8,
-                    ease: "Power3.easeOut",
-                })
                 .to("body", {
                     duration: 0.01,
                     css: { overflowY: "scroll" },
@@ -82,10 +73,6 @@ const PreLoader: React.FC = () => {
             <div 
                 className="preloader-content flex flex-col items-center justify-center gap-6 opacity-0"
             >
-                <div className="logo-container flex items-center justify-center mb-8">
-                    <Logo width={120} height={120} />
-                </div>
-                
                 <GooeyText 
                     texts={[
                         "",
