@@ -9,7 +9,7 @@ import {
     SiMongodb,
     SiNodedotjs
 } from "react-icons/si";
-import AnimatedTools from "../animations/AnimatedTools.tsx";
+import AnimatedTools from "../animations/AnimatedTools";
 
 const Tools = () => {
     return (

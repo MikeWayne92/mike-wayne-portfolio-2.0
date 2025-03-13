@@ -14,7 +14,7 @@ import About from "./sections/About";
 import Work from "./sections/Work";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import Tools from "./sections/Tools.tsx";
+import Tools from "./sections/Tools";
 
 export default function Home() {
 
