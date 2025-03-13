@@ -1,6 +1,5 @@
 import { ProjectProps } from "./projectDetails";
 import Link from "next/link";
-import Image from "next/image";
 import AnimatedTitle from "../../animations/AnimatedTitle";
 import AnimatedBody from "../../animations/AnimatedBody";
 import { motion } from "framer-motion";
@@ -8,6 +7,18 @@ import Container from "../container/Container";
 import React from "react";
 import {SiGithub} from "react-icons/si";
 import {BsLink45Deg} from "react-icons/bs";
+
+// Function to resolve image paths correctly regardless of environment
+const getImagePath = (path: string) => {
+    // For GitHub Pages deployment
+    if (process.env.NODE_ENV === 'production' && process.env.GITHUB_ACTIONS === 'true') {
+        const repo = 'mike-wayne-portfolio-2.0';
+        return `/${repo}${path}`;
+    }
+    // For local/development
+    return path;
+};
+
 const ProjectCard = ({
     id,
     name,
@@ -37,17 +48,12 @@ const ProjectCard = ({
                 left="0px"
                 angle={0}
             >
-                <Image
-                    src={image}
+                <img
+                    src={getImagePath(image)}
                     alt={name}
-                    width={500}
-                    height={500}
-                    className={`absolute -bottom-2 w-[65%] sm:w-[70%] md:w-[60%] lg:max-w-[55%] ${
+                    className={`absolute -bottom-2 object-contain w-[65%] sm:w-[70%] md:w-[60%] lg:max-w-[55%] ${
                         id % 2 === 0 ? "right-0" : "left-0"
                     }`}
-                    priority={true}
-                    style={{ objectFit: 'contain' }}
-                    unoptimized={true}
                 />
                 <div
                     className={`absolute top-0 text-[#0E1016] ${
