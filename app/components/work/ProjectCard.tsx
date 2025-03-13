@@ -42,15 +42,17 @@ const ProjectCard = ({
                     alt={name}
                     width={500}
                     height={500}
-                    className={`absolute -bottom-2 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] ${
+                    className={`absolute -bottom-2 w-[65%] sm:w-[70%] md:w-[60%] lg:max-w-[55%] ${
                         id % 2 === 0 ? "right-0" : "left-0"
                     }`}
                     priority={true}
+                    style={{ objectFit: 'contain' }}
+                    loading="eager"
                 />
                 <div
                     className={`absolute top-0 text-[#0E1016] ${
                         id % 2 === 0 ? "left-0 ml-8 lg:ml-14" : "right-0 mr-8 lg:mr-14"
-                    } mt-6 flex  items-center justify-center gap-4 lg:mt-10`}
+                    } mt-6 flex items-center justify-center gap-4 lg:mt-10`}
                 >
                     {available ? (
                         <>
@@ -84,16 +86,16 @@ const ProjectCard = ({
                     )}
                 </div>
                 <div
-                    className={`absolute text-white  ${
+                    className={`absolute text-white ${
                         !(id % 2 === 0)
-                            ? "right-0 top-20 mr-0 ml-10 md:right-0 md:ml-0 lg:right-0 lg:top-40 lg:mr-4"
-                            : "left-10 top-20 ml-0 md:mr-12 lg:top-36 lg:ml-4"
-                    } mb-10  md:mb-16 lg:mb-14 `}
+                            ? "right-0 top-16 px-4 sm:top-20 sm:px-6 md:right-0 md:px-8 lg:right-0 lg:top-40 lg:mr-4"
+                            : "left-0 top-16 px-4 sm:top-20 sm:px-6 md:left-0 md:px-8 lg:top-36 lg:ml-4"
+                    } mb-6 w-full max-w-full sm:mb-10 md:mb-16 lg:mb-14`}
                 >
                     <AnimatedTitle
                         text={name}
                         className={
-                            "max-w-[90%] text-[40px] leading-none text-white md:text-[44px] md:leading-none lg:max-w-[450px] lg:text-[48px] lg:leading-none"
+                            "max-w-[90%] text-[32px] leading-tight text-white sm:text-[36px] md:text-[44px] md:leading-none lg:max-w-[450px] lg:text-[48px] lg:leading-none"
                         }
                         wordSpace={"mr-[0.25em]"}
                         charSpace={"-mr-[0.01em]"}
@@ -101,10 +103,10 @@ const ProjectCard = ({
                     <AnimatedBody
                         text={description}
                         className={
-                            "mt-4 w-[90%] max-w-[457px] text-[16px] font-semibold text-[#95979D] "
+                            "mt-3 w-full max-w-[90%] text-[14px] font-semibold text-[#95979D] sm:mt-4 sm:text-[16px] md:max-w-[457px]"
                         }
                     />
-                    <div className="mt-9 mb-9 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-4 col-start-1 col-end-2">
+                    <div className="mt-6 grid grid-cols-4 gap-3 sm:mt-8 sm:grid-cols-4 sm:gap-4 md:mt-9 md:grid-cols-7 md:gap-4 lg:mb-9">
                         {technologies.map((IconComponent, index) => (
                             IconComponent ? (
                                 <div key={index} className={"relative"}>
@@ -112,7 +114,7 @@ const ProjectCard = ({
                                         href={techLinks[index]}
                                         target="_blank"
                                         aria-label={`Learn more about ${techNames[index]}`}
-                                        className="w-[20px] text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
+                                        className="inline-flex w-[18px] text-[18px] sm:w-[20px] sm:text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
                                         title={techLinks[index]}
                                         data-blobity-tooltip={techNames[index]}
                                         data-blobity-magnetic="false"
