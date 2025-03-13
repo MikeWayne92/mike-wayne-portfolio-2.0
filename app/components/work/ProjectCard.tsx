@@ -47,7 +47,7 @@ const ProjectCard = ({
                     }`}
                     priority={true}
                     style={{ objectFit: 'contain' }}
-                    loading="eager"
+                    unoptimized={true}
                 />
                 <div
                     className={`absolute top-0 text-[#0E1016] ${
@@ -90,12 +90,12 @@ const ProjectCard = ({
                         !(id % 2 === 0)
                             ? "right-0 top-16 px-4 sm:top-20 sm:px-6 md:right-0 md:px-8 lg:right-0 lg:top-40 lg:mr-4"
                             : "left-0 top-16 px-4 sm:top-20 sm:px-6 md:left-0 md:px-8 lg:top-36 lg:ml-4"
-                    } mb-6 w-full max-w-full sm:mb-10 md:mb-16 lg:mb-14`}
+                    } mb-6 max-w-[50%] sm:max-w-[40%] md:max-w-[40%] lg:max-w-[45%]`}
                 >
                     <AnimatedTitle
                         text={name}
                         className={
-                            "max-w-[90%] text-[32px] leading-tight text-white sm:text-[36px] md:text-[44px] md:leading-none lg:max-w-[450px] lg:text-[48px] lg:leading-none"
+                            "text-[32px] leading-tight text-white sm:text-[36px] md:text-[44px] md:leading-none lg:text-[48px] lg:leading-none"
                         }
                         wordSpace={"mr-[0.25em]"}
                         charSpace={"-mr-[0.01em]"}
@@ -103,10 +103,10 @@ const ProjectCard = ({
                     <AnimatedBody
                         text={description}
                         className={
-                            "mt-3 w-full max-w-[90%] text-[14px] font-semibold text-[#95979D] sm:mt-4 sm:text-[16px] md:max-w-[457px]"
+                            "mt-3 text-[14px] font-semibold text-[#95979D] sm:mt-4 sm:text-[16px]"
                         }
                     />
-                    <div className="mt-6 grid grid-cols-4 gap-3 sm:mt-8 sm:grid-cols-4 sm:gap-4 md:mt-9 md:grid-cols-7 md:gap-4 lg:mb-9">
+                    <div className="mt-6 grid grid-cols-3 gap-3 sm:mt-8 sm:grid-cols-3 sm:gap-4 md:mt-9 md:grid-cols-4 md:gap-4 lg:mb-9">
                         {technologies.map((IconComponent, index) => (
                             IconComponent ? (
                                 <div key={index} className={"relative"}>
