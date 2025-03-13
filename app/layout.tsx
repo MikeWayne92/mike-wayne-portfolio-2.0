@@ -2,11 +2,16 @@ import "./globals.css";
 import React, { ReactNode } from "react";
 import type { Metadata as NextMetadata } from "next";
 import { Inter } from "next/font/google";
+import { criticalImages } from "./components/work/preloadImages";
 
-const syne = Inter({
+// Optimize font loading
+const inter = Inter({
     subsets: ["latin"],
-    display: "block",
+    display: "swap", // Changed from "block" to "swap" for faster perceived loading
     weight: ["400", "500", "600", "700", "800"],
+    variable: "--font-inter", // Enable variable font support
+    preload: true,
+    fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata: NextMetadata = {
@@ -101,9 +106,38 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en">
+        <html lang="en" className={inter.variable}>
+            <head>
+                {/* Preload critical assets */}
+                {criticalImages.map((src, index) => (
+                    <link 
+                        key={index}
+                        rel="preload" 
+                        href={src} 
+                        as="image" 
+                        type={src.endsWith('.webp') ? "image/webp" : "image/png"} 
+                    />
+                ))}
+                {/* Add preconnect for external resources */}
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                {/* Performance optimizations */}
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+                <script 
+                    dangerouslySetInnerHTML={{ 
+                        __html: `
+                            // Inline script to preload critical images
+                            const imageUrls = ${JSON.stringify(criticalImages)};
+                            imageUrls.forEach(src => {
+                                const img = new Image();
+                                img.src = src;
+                            });
+                        ` 
+                    }} 
+                />
+            </head>
             <body
-                className={`${syne.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
+                className={`${inter.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
             >
                 {children}
             </body>

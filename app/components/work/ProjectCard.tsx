@@ -1,6 +1,5 @@
 import { ProjectProps } from "./projectDetails";
 import Link from "next/link";
-import Image from "next/image";
 import AnimatedTitle from "../../animations/AnimatedTitle";
 import AnimatedBody from "../../animations/AnimatedBody";
 import { motion } from "framer-motion";
@@ -8,19 +7,7 @@ import Container from "../container/Container";
 import React from "react";
 import {SiGithub} from "react-icons/si";
 import {BsLink45Deg} from "react-icons/bs";
-import { usePathname } from "next/navigation";
-
-// This function helps handle GitHub Pages image path issues
-const useImagePath = (imagePath: string) => {
-    const isGitHubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true';
-    const repoName = 'mike-wayne-portfolio-2.0';
-    
-    if (isGitHubPages) {
-        return `/${repoName}${imagePath}`;
-    }
-    
-    return imagePath;
-};
+import ResponsiveProjectImage from "./ResponsiveProjectImage";
 
 const ProjectCard = ({
     id,
@@ -32,11 +19,17 @@ const ProjectCard = ({
     github,
     demo,
     image,
+    imageSm,
+    imageMd,
+    imageLg,
+    imageXl,
+    webpImage,
+    webpImageSm,
+    webpImageMd,
+    webpImageLg,
+    webpImageXl,
     available,
 }: ProjectProps) => {
-    // Use the corrected image path
-    const imagePath = useImagePath(image);
-    
     return (
         <motion.div
             className={`relative bg-cover bg-no-repeat bg-center z-10 h-[550px] w-full items-stretch justify-center py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
@@ -54,18 +47,23 @@ const ProjectCard = ({
                 left="0px"
                 angle={0}
             >
-                <Image
-                    src={imagePath}
-                    alt={name}
-                    width={500}
-                    height={500}
-                    className={`absolute -bottom-2 w-[65%] sm:w-[70%] md:w-[60%] lg:max-w-[55%] ${
-                        id % 2 === 0 ? "right-0" : "left-0"
-                    }`}
-                    priority={true}
-                    style={{ objectFit: 'contain' }}
-                    loading="eager"
-                />
+                <div className={`absolute ${
+                    id % 2 === 0 ? "right-0" : "left-0"
+                } -bottom-2 w-[65%] sm:w-[70%] md:w-[60%] lg:max-w-[55%]`}>
+                    <ResponsiveProjectImage
+                        image={image}
+                        imageSm={imageSm}
+                        imageMd={imageMd}
+                        imageLg={imageLg}
+                        imageXl={imageXl}
+                        webpImage={webpImage}
+                        webpImageSm={webpImageSm}
+                        webpImageMd={webpImageMd}
+                        webpImageLg={webpImageLg}
+                        webpImageXl={webpImageXl}
+                        alt={name}
+                    />
+                </div>
                 <div
                     className={`absolute top-0 text-[#0E1016] ${
                         id % 2 === 0 ? "left-0 ml-8 lg:ml-14" : "right-0 mr-8 lg:mr-14"

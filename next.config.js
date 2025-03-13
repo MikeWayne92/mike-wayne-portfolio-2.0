@@ -7,9 +7,6 @@ const outputDir = process.env.BRANCH === 'dev' ? 'dev' : '.next';
 const repo = 'mike-wayne-portfolio-2.0';
 const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
 
-// Set GitHub Pages flag for the build
-process.env.NEXT_PUBLIC_GITHUB_PAGES = isGitHubPages ? 'true' : 'false';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: outputDir,
@@ -18,16 +15,27 @@ const nextConfig = {
   basePath: isGitHubPages ? `/${repo}` : '',
   assetPrefix: isGitHubPages ? `/${repo}/` : '',
   trailingSlash: true, // Helps with static file serving
+  
+  // Image configuration
   images: {
-    loader: 'custom',
-    loaderFile: './app/utils/imageLoader.js',
     unoptimized: true, // Required for static export
     domains: ["raw.githubusercontent.com"],
     formats: ['image/webp'],
-    minimumCacheTTL: 60,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 3600, // 1 hour cache
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 64, 96, 128, 256, 384],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
+  
+  // Compiler optimizations
   compiler: {
     reactRemoveProperties: isProduction,
     removeConsole: isProduction,
@@ -37,6 +45,8 @@ const nextConfig = {
       pure: true,
     },
   },
+  
+  // Performance and other settings
   devIndicators: {
     buildActivityPosition: "top-right",
   },
@@ -44,10 +54,13 @@ const nextConfig = {
     legacyBrowsers: false,
     swcFileReading: true,
     appDir: true,
+    optimizeCss: true, // Enables CSS optimization
   },
   optimizeFonts: true,
   productionBrowserSourceMaps: isProduction,
-  swcMinify: !isProduction,
+  swcMinify: true, // Always use SWC minification for better performance
+  poweredByHeader: false, // Remove X-Powered-By header
+  compress: true, // Enable compression
 };
 
 module.exports = nextConfig;
