@@ -25,15 +25,6 @@ export type ProjectProps = {
   github: string;
   demo: string;
   image: string;
-  imageSm: string;
-  imageMd: string;
-  imageLg: string;
-  imageXl: string;
-  webpImage: string;
-  webpImageSm: string;
-  webpImageMd: string;
-  webpImageLg: string;
-  webpImageXl: string;
   available: boolean;
 };
 
@@ -49,15 +40,6 @@ export const projects = [
         github: "https://github.com/MikeWayne92/Spotify-by-the-numbers",
         demo: "https://github.com/MikeWayne92/Spotify-by-the-numbers",
         image: "/projects/spotifydash.png",
-        imageSm: "/projects/optimized/spotifydash-sm.png",
-        imageMd: "/projects/optimized/spotifydash-md.png",
-        imageLg: "/projects/optimized/spotifydash-lg.png",
-        imageXl: "/projects/optimized/spotifydash-xl.png",
-        webpImage: "/projects/optimized/spotifydash.webp",
-        webpImageSm: "/projects/optimized/spotifydash-sm.webp",
-        webpImageMd: "/projects/optimized/spotifydash-md.webp",
-        webpImageLg: "/projects/optimized/spotifydash-lg.webp",
-        webpImageXl: "/projects/optimized/spotifydash-xl.webp",
         available: true,
     },
     {
@@ -71,15 +53,6 @@ export const projects = [
         github: "https://github.com/mikewayne92/SQL-beats",
         demo: "https://github.com/mikewayne92/SQL-beats",
         image: "/projects/sqlbeats.png",
-        imageSm: "/projects/optimized/sqlbeats-sm.png",
-        imageMd: "/projects/optimized/sqlbeats-md.png",
-        imageLg: "/projects/optimized/sqlbeats-lg.png",
-        imageXl: "/projects/optimized/sqlbeats-xl.png",
-        webpImage: "/projects/optimized/sqlbeats.webp",
-        webpImageSm: "/projects/optimized/sqlbeats-sm.webp",
-        webpImageMd: "/projects/optimized/sqlbeats-md.webp",
-        webpImageLg: "/projects/optimized/sqlbeats-lg.webp",
-        webpImageXl: "/projects/optimized/sqlbeats-xl.webp",
         available: true,
     },
 ];
