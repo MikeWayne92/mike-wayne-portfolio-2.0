@@ -15,6 +15,7 @@ import Work from "./sections/Work";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Tools from "./sections/Tools";
+import FloatingButton from "./components/buttons/FloatingButton";
 
 export default function Home() {
 
@@ -67,6 +68,7 @@ export default function Home() {
                 <About />
                 <Work />
                 <Tools />
+                <FloatingButton />
                 <Contact />
                 <Footer />
             </main>

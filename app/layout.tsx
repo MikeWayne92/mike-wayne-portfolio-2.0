@@ -13,13 +13,19 @@ export const metadata: NextMetadata = {
     metadataBase: new URL("https://www.example.com/"),
     title: "Mike Wayne - Portfolio",
     description:
-    "Mike Wayne's professional portfolio showcasing projects and skills in frontend and full-stack development.",
+    "Mike Wayne's professional portfolio showcasing projects and skills in data analysis frontend and full-stack development.",
     generator: "Next.js",
     applicationName: "Mike Wayne Portfolio",
     keywords: [
         "Mike Wayne",
         "Portfolio",
         "developer",
+        "data analyst",
+        "data science",
+        "data visualization",
+        "data engineering",
+        "data analysis",
+        "data",
         "frontend",
         "nextjs",
         "react",
@@ -40,8 +46,8 @@ export const metadata: NextMetadata = {
     openGraph: {
         title: "Mike Wayne - Portfolio",
         description:
-      "Mike Wayne's professional portfolio showcasing projects and skills in frontend and full-stack development.",
-        url: "https://www.mikewayne.com/",
+      "Mike Wayne's professional portfolio showcasing projects and skills in data analysis frontend and full-stack development.",
+        url: "https://mikewayne92.github.io/mike-wayne-portfolio-2.0/",
         siteName: "Mike Wayne Portfolio",
         images: [
             {
@@ -58,7 +64,7 @@ export const metadata: NextMetadata = {
         card: "summary_large_image",
         title: "Mike Wayne - Portfolio",
         description:
-      "Mike Wayne's professional portfolio showcasing projects and skills in frontend and full-stack development.",
+      "Mike Wayne's professional portfolio showcasing projects and skills in data analysis frontend and full-stack development.",
         creator: "@mikewayne",
         creatorId: "0000000000",
         images: ["/logo.svg"],
