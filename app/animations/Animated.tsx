@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Children } from "react";
 import { useAnimation, motion, Variants, Transition } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { IconType } from "react-icons";
@@ -58,7 +58,7 @@ const Animated: React.FC<AnimatedProps> = ({
             variants={animatedVariants}
             transition={transition}
         >
-            {React.Children.map(children, (child, index) => {
+            {Children.map(children, (child, index) => {
                 // Cast the child to an IconType to access the IconType properties
                 const icon = child as React.ReactElement<IconType>;
                 return (

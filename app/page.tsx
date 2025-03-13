@@ -18,7 +18,7 @@ import Tools from "./sections/Tools";
 
 export default function Home() {
 
-    const [isMobile, setIsMobile] = useState(false);
+    const [, setIsMobile] = useState(false);
 
     useEffectOnce(() => {
         window.scrollTo({

@@ -11,7 +11,7 @@
     ],
     "module": "esnext",
     "moduleDetection": "force",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,

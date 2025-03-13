@@ -1,0 +1,3 @@
+# Ignore background components with indentation issues
+app/components/background/**
+app/components/other/GooeyText.tsx 
