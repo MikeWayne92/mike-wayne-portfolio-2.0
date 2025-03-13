@@ -1,9 +1,4 @@
 <div align="center">
-  <a href="https://github.com/mikewayne92">
-
-
- <img src="/public/logo.svg" alt="Logo" width="80" height="80">
-  </a>
   <h1 align="center">Mike Wayne Portfolio 2.0</h1>
   <p align="center">
    Professional portfolio for Mike Wayne - Analyst & AI Developer. Built with React, Typescript, Tailwind CSS, and Framer Motion.
