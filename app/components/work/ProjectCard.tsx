@@ -8,6 +8,20 @@ import Container from "../container/Container";
 import React from "react";
 import {SiGithub} from "react-icons/si";
 import {BsLink45Deg} from "react-icons/bs";
+import { usePathname } from "next/navigation";
+
+// This function helps handle GitHub Pages image path issues
+const useImagePath = (imagePath: string) => {
+    const isGitHubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true';
+    const repoName = 'mike-wayne-portfolio-2.0';
+    
+    if (isGitHubPages) {
+        return `/${repoName}${imagePath}`;
+    }
+    
+    return imagePath;
+};
+
 const ProjectCard = ({
     id,
     name,
@@ -20,6 +34,9 @@ const ProjectCard = ({
     image,
     available,
 }: ProjectProps) => {
+    // Use the corrected image path
+    const imagePath = useImagePath(image);
+    
     return (
         <motion.div
             className={`relative bg-cover bg-no-repeat bg-center z-10 h-[550px] w-full items-stretch justify-center py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
@@ -38,7 +55,7 @@ const ProjectCard = ({
                 angle={0}
             >
                 <Image
-                    src={image}
+                    src={imagePath}
                     alt={name}
                     width={500}
                     height={500}

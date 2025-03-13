@@ -7,6 +7,9 @@ const outputDir = process.env.BRANCH === 'dev' ? 'dev' : '.next';
 const repo = 'mike-wayne-portfolio-2.0';
 const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
 
+// Set GitHub Pages flag for the build
+process.env.NEXT_PUBLIC_GITHUB_PAGES = isGitHubPages ? 'true' : 'false';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: outputDir,
@@ -16,6 +19,8 @@ const nextConfig = {
   assetPrefix: isGitHubPages ? `/${repo}/` : '',
   trailingSlash: true, // Helps with static file serving
   images: {
+    loader: 'custom',
+    loaderFile: './app/utils/imageLoader.js',
     unoptimized: true, // Required for static export
     domains: ["raw.githubusercontent.com"],
     formats: ['image/webp'],
