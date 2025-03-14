@@ -21,16 +21,16 @@ const About = () => {
 
                 <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
                     <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16 lg:max-w-[90%] lg:text-[24px]">
-                        <AnimatedBody text="As a passionate analyst & developer, I bring a wealth of experience in front-end and full-stack development, with expertise in JavaScript, React.js, Next.js, and modern HTML & CSS. My commitment to innovation drives me to continuously learn and experiment with new technologies, ensuring that I deliver unique and cutting-edge solutions." />
+                        <AnimatedBody text="With 2+ years as an AI Data Operations Analyst, I specialize in optimizing data workflows, ensuring quality for AI/ML initiatives, and driving cross-functional collaboration. Proficient in SQL, Python, root-cause analysis, and workflow automations, I bridge technical execution with strategic insights to empower data-centric decision-making." />
 
                         <AnimatedBody
                             delay={0.1}
-                            text="Complementing my development skills, I have over two years of experience as an AI Data Operations Analyst, where I've supported AI/ML initiatives through data workflow optimization, quality assurance, and cross-functional collaboration. Proficient in SQL, Python, root cause analysis, and automation, I've improved data accuracy by 25% and operational efficiency by 30%."
+                            text="Building on this foundation, I bring robust expertise in front-end and full-stack development, leveraging JavaScript, React.js, Next.js, and modern HTML/CSS to craft dynamic, user-centric solutions. My passion for innovation fuels continuous learning, enabling me to integrate emerging technologies into scalable applications."
                         />
 
                         <AnimatedBody
                             delay={0.2}
-                            text="This dual proficiency enables me to approach projects with a holistic view, combining creative problem-solving with data-driven decision-making. I'm currently working on exciting projects that utilize both aspects of my expertise and am always open to new opportunities and collaborations."
+                            text="This hybrid skill set—analytical rigor paired with creative development—allows me to tackle projects holistically, balancing technical precision with strategic vision. Currently, I'm building projects that fuse AI-driven insights with elegant interfaces, and I'm eager to collaborate on challenges that demand both data fluency and design excellence."
                         />
                     </div>
                 </div>
