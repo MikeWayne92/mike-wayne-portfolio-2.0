@@ -11,7 +11,9 @@ import {
     SiExpress,
     SiSqlite,
     SiVite,
-    SiChartdotjs
+    SiChartdotjs,
+    SiPython,
+    SiPostgresql
 } from "react-icons/si";
 import {IconType} from "react-icons";
 
@@ -53,6 +55,19 @@ export const projects = [
         github: "https://github.com/mikewayne92/SQL-beats",
         demo: "https://github.com/mikewayne92/SQL-beats",
         image: "/projects/sqlbeats.png",
+        available: true,
+    },
+    {
+        id: 2,
+        name: "Dash",
+        description:
+            "A modern data visualization and analytics platform that transforms complex datasets into intuitive, interactive dashboards. Built with Python and React, Dash makes it easy to explore and understand your data through customizable charts and reports.",
+        technologies: [SiPython, SiReact, SiJavascript, SiPostgresql, SiNodedotjs, SiGithub],
+        techNames: ["Python", "React", "JavaScript", "PostgreSQL", "Node.js", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://reactjs.org/", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://www.postgresql.org/", "https://nodejs.org/", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/Dash",
+        demo: "https://github.com/MikeWayne92/Dash",
+        image: "/projects/dash.png",
         available: true,
     },
 ];
