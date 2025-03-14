@@ -13,7 +13,8 @@ import {
     SiVite,
     SiChartdotjs,
     SiPython,
-    SiPostgresql
+    SiPostgresql,
+    SiGoogleanalytics
 } from "react-icons/si";
 import {IconType} from "react-icons";
 
@@ -62,9 +63,9 @@ export const projects = [
         name: "Dash",
         description:
             "A modern data visualization and analytics platform that transforms complex datasets into intuitive, interactive dashboards. Built with Python and React, Dash makes it easy to explore and understand your data through customizable charts and reports.",
-        technologies: [SiPython, SiReact, SiJavascript, SiPostgresql, SiNodedotjs, SiGithub],
-        techNames: ["Python", "React", "JavaScript", "PostgreSQL", "Node.js", "GitHub"],
-        techLinks: ["https://www.python.org/", "https://reactjs.org/", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://www.postgresql.org/", "https://nodejs.org/", "https://github.com/"],
+        technologies: [SiPython, SiReact, SiJavascript, SiPostgresql, SiNodedotjs, SiGoogleanalytics, SiGithub],
+        techNames: ["Python", "React", "JavaScript", "PostgreSQL", "Node.js", "Looker Studio", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://reactjs.org/", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://www.postgresql.org/", "https://nodejs.org/", "https://lookerstudio.google.com/", "https://github.com/"],
         github: "https://github.com/MikeWayne92/Dash",
         demo: "https://github.com/MikeWayne92/Dash",
         image: "/projects/dash.png",
