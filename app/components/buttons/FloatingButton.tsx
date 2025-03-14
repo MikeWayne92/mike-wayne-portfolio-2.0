@@ -3,8 +3,17 @@ import { motion } from 'framer-motion';
 import { resolvePublicPath } from '../../utils/pathUtils';
 
 const FloatingButton = () => {
-    const [position, setPosition] = useState(0);
-    const [direction, setDirection] = useState(1);
+    // Vertical position state
+    const [positionY, setPositionY] = useState(0);
+    const [directionY, setDirectionY] = useState(1);
+    
+    // Horizontal position state
+    const [positionX, setPositionX] = useState(0);
+    const [directionX, setDirectionX] = useState(1);
+    
+    // Randomization factors
+    const [randomFactor, setRandomFactor] = useState(Math.random() * 0.5 + 0.5);
+    
     const [hovering, setHovering] = useState(false);
     
     // Check for mobile device on mount and resize
@@ -23,22 +32,48 @@ const FloatingButton = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
     
-    // Anti-gravity floating animation
+    // Periodically update random factor for organic movement
+    useEffect(() => {
+        const randomInterval = setInterval(() => {
+            setRandomFactor(Math.random() * 0.5 + 0.5);
+        }, 2000);
+        
+        return () => clearInterval(randomInterval);
+    }, []);
+    
+    // Anti-gravity floating animation - vertical
     useEffect(() => {
         const floatInterval = setInterval(() => {
             // If hovering, intensify the floating effect
-            const speed = hovering ? 1.5 : 0.5;
+            const speed = hovering ? 1.5 : 0.5 * randomFactor;
             
-            if (position > 20) {
-                setDirection(-1);
-            } else if (position < -20) {
-                setDirection(1);
+            if (positionY > 15) {
+                setDirectionY(-1);
+            } else if (positionY < -15) {
+                setDirectionY(1);
             }
-            setPosition(prev => prev + direction * speed);
+            setPositionY(prev => prev + directionY * speed);
         }, 30);
         
         return () => clearInterval(floatInterval);
-    }, [position, direction, hovering]);
+    }, [positionY, directionY, hovering, randomFactor]);
+    
+    // Horizontal floating animation
+    useEffect(() => {
+        const floatInterval = setInterval(() => {
+            // Slower horizontal movement with randomization
+            const speed = hovering ? 0.8 : 0.3 * randomFactor;
+            
+            if (positionX > 10) {
+                setDirectionX(-1);
+            } else if (positionX < -10) {
+                setDirectionX(1);
+            }
+            setPositionX(prev => prev + directionX * speed);
+        }, 40); // Slightly different interval for more organic movement
+        
+        return () => clearInterval(floatInterval);
+    }, [positionX, directionX, hovering, randomFactor]);
     
     // Resolve the path to the PDF file
     const pdfPath = resolvePublicPath('/MCollinsDataOps.pdf');
@@ -58,16 +93,19 @@ const FloatingButton = () => {
     };
     
     return (
-        <section className="w-full relative bg-[#0E1016] py-8 md:py-16">
+        <section className="w-full relative bg-[#0E1016] py-4 md:py-8">
             <motion.div 
-                className="w-full flex flex-col justify-center items-center relative z-20 mt-4 mb-10 md:mb-12"
+                className="w-full flex flex-col justify-center items-center relative z-20 mt-2 mb-6 md:mb-8"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
             >
                 <motion.div
                     className="relative mb-2"
-                    style={{ y: position }}
+                    style={{ 
+                        y: positionY,
+                        x: positionX
+                    }}
                     whileHover={{ 
                         scale: 1.1,
                         rotate: [0, -2, 2, -2, 0],
