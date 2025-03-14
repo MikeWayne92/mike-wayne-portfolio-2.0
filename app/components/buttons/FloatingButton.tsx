@@ -11,25 +11,38 @@ const FloatingButton = () => {
     const [positionX, setPositionX] = useState(0);
     const [directionX, setDirectionX] = useState(1);
     
+    // Screen-based bounds
+    const [horizontalBounds, setHorizontalBounds] = useState({ min: -10, max: 10 });
+    
     // Randomization factors
     const [randomFactor, setRandomFactor] = useState(Math.random() * 0.5 + 0.5);
     
     const [hovering, setHovering] = useState(false);
     
-    // Check for mobile device on mount and resize
+    // Update horizontal bounds based on screen width
+    const updateHorizontalBounds = () => {
+        const screenWidth = window.innerWidth;
+        // Use a percentage of the screen width for bounds
+        // More space on wider screens, less on mobile
+        const boundFactor = screenWidth >= 1024 ? 0.15 : screenWidth >= 768 ? 0.10 : 0.05;
+        const maxBound = Math.round(screenWidth * boundFactor);
+        setHorizontalBounds({ min: -maxBound, max: maxBound });
+    };
+    
+    // Check for mobile device and update bounds on mount and resize
     useEffect(() => {
-        const checkMobile = () => {
-            // Mobile check logic can be added here if needed in the future
+        const handleResize = () => {
+            updateHorizontalBounds();
         };
         
         // Check initially
-        checkMobile();
+        handleResize();
         
         // Add resize listener
-        window.addEventListener('resize', checkMobile);
+        window.addEventListener('resize', handleResize);
         
         // Cleanup
-        return () => window.removeEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
     
     // Periodically update random factor for organic movement
@@ -64,16 +77,16 @@ const FloatingButton = () => {
             // Slower horizontal movement with randomization
             const speed = hovering ? 0.8 : 0.3 * randomFactor;
             
-            if (positionX > 10) {
+            if (positionX > horizontalBounds.max) {
                 setDirectionX(-1);
-            } else if (positionX < -10) {
+            } else if (positionX < horizontalBounds.min) {
                 setDirectionX(1);
             }
             setPositionX(prev => prev + directionX * speed);
         }, 40); // Slightly different interval for more organic movement
         
         return () => clearInterval(floatInterval);
-    }, [positionX, directionX, hovering, randomFactor]);
+    }, [positionX, directionX, hovering, randomFactor, horizontalBounds]);
     
     // Resolve the path to the PDF file
     const pdfPath = resolvePublicPath('/MCollinsDataOps.pdf');
