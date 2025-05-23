@@ -37,19 +37,6 @@ export type ProjectProps = {
 export const projects = [
     {
         id: 0,
-        name: "NBA Player Statistics Dashboard",
-        description:
-            "An interactive web dashboard for analyzing NBA player statistics with a modern dark theme interface. Features include player comparisons, career timelines, and detailed statistical analysis with interactive visualizations powered by Plotly and Dash.",
-        technologies: [SiPython, SiPandas, SiPlotly, SiNumpy, SiHtml5, SiCss3, SiGithub],
-        techNames: ["Python", "Pandas", "Plotly", "NumPy", "HTML5", "CSS3", "GitHub"],
-        techLinks: ["https://www.python.org/", "https://pandas.pydata.org/", "https://plotly.com/", "https://numpy.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://github.com/"],
-        github: "https://github.com/MikeWayne92/nba-dashboard",
-        demo: "https://nba-dashboard-ugvy.onrender.com",
-        image: "/projects/Maindash.png",
-        available: true,
-    },
-    {
-        id: 1,
         name: "Spotify by the Numbers",
         description:
             "A sleek, interactive dashboard for visualizing your Spotify listening history. Upload your Spotify data and get beautiful visualizations of your listening habits, including top artists, tracks, and listening patterns.",
@@ -62,7 +49,7 @@ export const projects = [
         available: true,
     },
     {
-        id: 2,
+        id: 1,
         name: "SQLBeats",
         description:
             "An interactive music database application designed to make learning SQL fun and engaging. Users practice database queries through music exploration, making SQL concepts more accessible through hands-on music management.",
@@ -75,7 +62,7 @@ export const projects = [
         available: true,
     },
     {
-        id: 3,
+        id: 2,
         name: "Dash",
         description:
             "A modern data visualization and analytics platform that transforms complex datasets into intuitive, interactive dashboards. Built with Python and React, Dash makes it easy to explore and understand your data through customizable charts and reports.",
@@ -85,6 +72,19 @@ export const projects = [
         github: "https://github.com/MikeWayne92/Dash",
         demo: "https://lookerstudio.google.com/s/kRYxYqLWBZ4",
         image: "/projects/dash.png",
+        available: true,
+    },
+    {
+        id: 3,
+        name: "NBA Player Statistics Dashboard",
+        description:
+            "An interactive web dashboard for analyzing NBA player statistics with a modern dark theme interface. Features include player comparisons, career timelines, and detailed statistical analysis with interactive visualizations powered by Plotly and Dash.",
+        technologies: [SiPython, SiPandas, SiPlotly, SiNumpy, SiHtml5, SiCss3, SiGithub],
+        techNames: ["Python", "Pandas", "Plotly", "NumPy", "HTML5", "CSS3", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://pandas.pydata.org/", "https://plotly.com/", "https://numpy.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/nba-dashboard",
+        demo: "https://nba-dashboard-ugvy.onrender.com",
+        image: "/projects/Maindash.png",
         available: true,
     },
 ];
