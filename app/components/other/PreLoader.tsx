@@ -76,10 +76,8 @@ const PreLoader: React.FC = () => {
                 <GooeyText 
                     texts={[
                         "",
-                        "MIKE\nWAYNE",
-                        "PRODUCTIONS",
+                        "MIKE\nWAYNE\nPRODUCTIONS",
                         "ANALYST &\nAI DEVELOPER",
-                        "PORTFOLIO",
                         ""
                     ]}
                     morphTime={0.8}
