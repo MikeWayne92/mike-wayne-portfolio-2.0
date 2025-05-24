@@ -112,7 +112,7 @@ const ProjectCard = ({
                             "mt-3 text-[14px] font-semibold text-[#95979D] sm:mt-4 sm:text-[16px]"
                         }
                     />
-                    <div className="mt-6 grid grid-cols-3 gap-3 sm:mt-8 sm:grid-cols-3 sm:gap-4 md:mt-9 md:grid-cols-4 md:gap-4 lg:mb-9">
+                    <div className="mt-6 grid grid-cols-3 gap-3 sm:mt-8 sm:grid-cols-3 sm:gap-4 md:mt-9 md:grid-cols-4 md:gap-4 lg:mt-9 lg:mb-12">
                         {technologies.map((IconComponent, index) => (
                             IconComponent ? (
                                 <div key={index} className={"relative"}>
