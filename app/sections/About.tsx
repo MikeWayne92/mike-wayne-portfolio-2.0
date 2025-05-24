@@ -6,12 +6,12 @@ import AnimatedTitle from "../animations/AnimatedTitle";
 const About = () => {
     return (
         <section
-            className="relative z-10 w-full items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-16 pb-36 md:pt-20 md:pb-44 lg:pt-20 lg:pb-56"
+            className="relative z-10 w-full items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-16 pb-32 md:pt-20 md:pb-36 lg:pt-20 lg:pb-48"
             id="about"
         >
             <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
                 <AnimatedTitle
-                    text={"Michael Wayne Collins Jr."}
+                    text={"About Mike Wayne"}
                     className={
                         "mb-10 text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-[#e4ded7] sm:text-[45px] md:mb-16 md:text-[60px] lg:text-[80px]"
                     }
@@ -20,17 +20,22 @@ const About = () => {
                 />
 
                 <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
-                    <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16 lg:max-w-[90%] lg:text-[24px]">
-                        <AnimatedBody text="With 2+ years as an AI Data Operations Analyst, I specialize in optimizing data workflows, ensuring quality for AI/ML initiatives, and driving cross-functional collaboration. Proficient in SQL, Python, root-cause analysis, and workflow automations, I bridge technical execution with strategic insights to empower data-centric decision-making." />
+                    <div className="flex w-[100%] flex-col gap-6 text-[18px] font-medium leading-relaxed tracking-wide text-[#e4ded7] md:gap-8 md:text-[20px] md:leading-relaxed lg:gap-10 lg:max-w-[90%] lg:text-[24px]">
+                        <AnimatedBody 
+                            text="I'm Mike Wayne, a data-driven developer passionate about transforming complex datasets into intuitive, interactive experiences." 
+                            className="opacity-90"
+                        />
 
                         <AnimatedBody
                             delay={0.1}
-                            text="Building on this foundation, I bring robust expertise in front-end and full-stack development, leveraging JavaScript, React.js, Next.js, and modern HTML/CSS to craft dynamic, user-centric solutions. My passion for innovation fuels continuous learning, enabling me to integrate emerging technologies into scalable applications."
+                            text="Currently working as an AI Data Ops Analyst, with a strong foundation in SQL, Python, JavaScript, and HTML, I specialize in building engaging dashboards, educational tools, and data visualizations that make information accessible and impactful."
+                            className="opacity-80"
                         />
 
                         <AnimatedBody
                             delay={0.2}
-                            text="This hybrid skill set—analytical rigor paired with creative development—allows me to tackle projects holistically, balancing technical precision with strategic vision. Currently, I'm building projects that fuse AI-driven insights with elegant interfaces, and I'm eager to collaborate on challenges that demand both data fluency and design excellence."
+                            text="I believe in continuous improvement; 1% better every day, and I'm always eager to learn, collaborate, and create solutions that bridge data and design."
+                            className="opacity-90"
                         />
                     </div>
                 </div>
