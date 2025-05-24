@@ -84,7 +84,7 @@ export const projects = [
         techLinks: ["https://www.python.org/", "https://pandas.pydata.org/", "https://plotly.com/", "https://numpy.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://github.com/"],
         github: "https://github.com/MikeWayne92/nba-dashboard",
         demo: "https://nba-dashboard-ugvy.onrender.com",
-        image: "/projects/Maindash.png",
+        image: "/projects/nba-dashboard.png",
         available: true,
     },
 ];
