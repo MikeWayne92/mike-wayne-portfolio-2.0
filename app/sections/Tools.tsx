@@ -9,7 +9,9 @@ import {
     SiTypescript,
     SiMysql,
     SiAdobephotoshop,
-    SiAdobeillustrator
+    SiAdobeillustrator,
+    SiPython,
+    SiPandas
 } from "react-icons/si";
 import AnimatedTools from "../animations/AnimatedTools";
 
@@ -34,11 +36,13 @@ const Tools = () => {
                     <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-bold leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[40px] md:leading-relaxed lg:mb-16 lg:w-[75%]">
                         <AnimatedBody delay={0.2} text="Development" />
                         <div>
-                            <AnimatedTools className="grid grid-cols-4 gap-4" delay={0.2} stepSize={0.1} iconSize={50}>
+                            <AnimatedTools className="grid grid-cols-3 gap-4 md:grid-cols-6" delay={0.2} stepSize={0.1} iconSize={50}>
                                 <SiJavascript size={50}/>
                                 <SiTypescript size={50}/>
                                 <SiReact size={50}/>
                                 <SiMysql size={50}/>
+                                <SiPython size={50}/>
+                                <SiPandas size={50}/>
                             </AnimatedTools>
                         </div>
                     </div>
