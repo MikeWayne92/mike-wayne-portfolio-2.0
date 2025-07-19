@@ -89,7 +89,7 @@ const FloatingButton = () => {
     }, [positionX, directionX, hovering, randomFactor, horizontalBounds]);
     
     // Resolve the path to the PDF file
-    const pdfPath = resolvePublicPath('/MCollinsDataOps.pdf');
+    const pdfPath = resolvePublicPath('/MCollins_DataOps.pdf');
 
     // Variant for initial mount animation
     const containerVariants = {
@@ -131,7 +131,7 @@ const FloatingButton = () => {
                     <a
                         href={pdfPath}
                         target="_blank"
-                        download="MCollinsDataOps.pdf"
+                        download="MCollins_DataOps.pdf"
                         rel="noopener noreferrer"
                         className="bg-[#e4ded7] text-black font-bold py-3 px-6 md:py-4 md:px-8 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300 text-sm md:text-base"
                         data-blobity-tooltip="Download Resume"
