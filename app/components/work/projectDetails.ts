@@ -63,15 +63,15 @@ export const projects = [
     },
     {
         id: 2,
-        name: "Dash",
+        name: "UFC Analysis",
         description:
-            "A modern data visualization and analytics platform that transforms complex datasets into intuitive, interactive dashboards. Built with Python and React, Dash makes it easy to explore and understand your data through customizable charts and reports.",
-        technologies: [SiPython, SiReact, SiJavascript, SiPostgresql, SiNodedotjs, SiGoogleanalytics, SiGithub],
-        techNames: ["Python", "React", "JavaScript", "PostgreSQL", "Node.js", "Looker Studio", "GitHub"],
-        techLinks: ["https://www.python.org/", "https://reactjs.org/", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://www.postgresql.org/", "https://nodejs.org/", "https://lookerstudio.google.com/", "https://github.com/"],
-        github: "https://github.com/MikeWayne92/Dash",
-        demo: "https://lookerstudio.google.com/s/kRYxYqLWBZ4",
-        image: "/projects/dash.png",
+            "A comprehensive data analysis project exploring UFC fighter statistics and performance metrics. This project delves into fighter rankings, win-loss patterns, and performance analytics to uncover insights about what makes successful UFC fighters.",
+        technologies: [SiPython, SiPandas, SiPlotly, SiNumpy, SiGithub],
+        techNames: ["Python", "Pandas", "Plotly", "NumPy", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://pandas.pydata.org/", "https://plotly.com/", "https://numpy.org/", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/ufc_analysis",
+        demo: "https://github.com/MikeWayne92/ufc_analysis",
+        image: "/projects/ufc-analysis.png",
         available: true,
     },
     {
