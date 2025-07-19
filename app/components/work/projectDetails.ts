@@ -50,15 +50,15 @@ export const projects = [
     },
     {
         id: 1,
-        name: "SQLBeats",
+        name: "Walmart Sales Analysis",
         description:
-            "An interactive music database application designed to make learning SQL fun and engaging. Users practice database queries through music exploration, making SQL concepts more accessible through hands-on music management.",
-        technologies: [SiHtml5, SiCss3, SiJavascript, SiNodedotjs, SiExpress, SiSqlite],
-        techNames: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "SQLite3"],
-        techLinks: ["https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://nodejs.org/", "https://expressjs.com/", "https://www.sqlite.org/"],
-        github: "https://github.com/mikewayne92/SQL-beats",
-        demo: "https://github.com/mikewayne92/SQL-beats",
-        image: "/projects/sqlbeats.png",
+            "A comprehensive business intelligence analysis of Walmart sales data spanning multiple stores and time periods. The analysis provides actionable insights into sales performance, seasonal trends, store comparisons, and the impact of external factors on retail performance.",
+        technologies: [SiReact, SiTypescript, SiTailwindcss, SiChartdotjs, SiGithub],
+        techNames: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "GitHub"],
+        techLinks: ["https://reactjs.org/", "https://www.typescriptlang.org/", "https://tailwindcss.com/", "https://www.chartjs.org/", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/walmart_sales_analysis",
+        demo: "https://github.com/MikeWayne92/walmart_sales_analysis",
+        image: "/projects/walmart-sales-analysis.png",
         available: true,
     },
     {
