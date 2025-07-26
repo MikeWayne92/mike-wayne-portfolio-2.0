@@ -97,7 +97,7 @@ export const projects = [
         techLinks: ["https://www.python.org/", "https://pandas.pydata.org/", "https://plotly.com/", "https://numpy.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://github.com/"],
         github: "https://github.com/MikeWayne92/cafe-sales-analysis",
         demo: "https://mikewayne92.github.io/cafe-sales-analysis/",
-        image: "/projects/dash.png",
+        image: "/projects/cafe-sales-dashboard.png",
         available: true,
     },
 ];
