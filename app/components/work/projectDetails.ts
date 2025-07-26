@@ -87,4 +87,17 @@ export const projects = [
         image: "/projects/nba-dashboard.png",
         available: true,
     },
+    {
+        id: 4,
+        name: "Cafe Sales Analytics Dashboard",
+        description:
+            "A comprehensive data analysis platform for cafe sales performance with interactive visualizations. Features include sales trends analysis, product performance metrics, time-based insights, location analytics, and payment method analysis with automated business insights generation.",
+        technologies: [SiPython, SiPandas, SiPlotly, SiNumpy, SiHtml5, SiCss3, SiJavascript, SiGithub],
+        techNames: ["Python", "Pandas", "Plotly", "NumPy", "HTML5", "CSS3", "JavaScript", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://pandas.pydata.org/", "https://plotly.com/", "https://numpy.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/cafe-sales-analysis",
+        demo: "https://mikewayne92.github.io/cafe-sales-analysis/",
+        image: "/projects/dash.png",
+        available: true,
+    },
 ];
