@@ -104,6 +104,55 @@ const FloatingButton = () => {
             }
         }
     };
+
+    // Glowing button styles with hover and active states
+    const getButtonStyles = (isHovered: boolean, isActive: boolean) => {
+        const baseStyles = {
+            '--glow-color': 'rgb(217, 176, 255)',
+            '--glow-spread-color': 'rgba(191, 123, 255, 0.781)',
+            '--enhanced-glow-color': 'rgb(231, 206, 255)',
+            '--btn-color': 'rgb(100, 61, 136)',
+            border: '.25em solid var(--glow-color)',
+            padding: '1em 3em',
+            fontSize: '15px',
+            fontWeight: 'bold',
+            borderRadius: '1em',
+            outline: 'none',
+            position: 'relative',
+            transition: 'all 0.3s',
+            cursor: 'pointer',
+            textDecoration: 'none',
+            display: 'inline-block',
+            fontFamily: 'inherit',
+            textShadow: '0 0 .5em var(--glow-color)',
+        } as React.CSSProperties;
+
+        if (isHovered) {
+            return {
+                ...baseStyles,
+                color: 'var(--btn-color)',
+                backgroundColor: 'var(--glow-color)',
+                boxShadow: '0 0 1em .25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 .75em .25em var(--glow-color)',
+            } as React.CSSProperties;
+        } else if (isActive) {
+            return {
+                ...baseStyles,
+                color: 'var(--glow-color)',
+                backgroundColor: 'var(--btn-color)',
+                boxShadow: '0 0 0.6em .25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 .5em .25em var(--glow-color)',
+            } as React.CSSProperties;
+        } else {
+            return {
+                ...baseStyles,
+                color: 'var(--glow-color)',
+                backgroundColor: 'var(--btn-color)',
+                boxShadow: '0 0 1em .25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 .75em .25em var(--glow-color)',
+            } as React.CSSProperties;
+        }
+    };
+
+    const [isButtonHovered, setIsButtonHovered] = useState(false);
+    const [isButtonActive, setIsButtonActive] = useState(false);
     
     return (
         <section className="w-full relative bg-[#0E1016] py-4 md:py-8">
@@ -134,8 +183,14 @@ const FloatingButton = () => {
                         download="MCollinsDataOps.pdf"
                         type="application/pdf"
                         rel="noopener noreferrer"
-                        className="bg-[#e4ded7] text-black font-bold py-3 px-6 md:py-4 md:px-8 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300 text-sm md:text-base"
+                        style={getButtonStyles(isButtonHovered, isButtonActive)}
                         data-blobity-tooltip="Download Resume"
+                        onMouseEnter={() => setIsButtonHovered(true)}
+                        onMouseLeave={() => setIsButtonHovered(false)}
+                        onMouseDown={() => setIsButtonActive(true)}
+                        onMouseUp={() => setIsButtonActive(false)}
+                        onTouchStart={() => setIsButtonActive(true)}
+                        onTouchEnd={() => setIsButtonActive(false)}
                     >
                         <span>RESUME</span>
                     </a>
