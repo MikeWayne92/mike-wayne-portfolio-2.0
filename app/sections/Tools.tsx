@@ -23,7 +23,7 @@ type ToolSvgIconProps = {
 // while we render your uploaded SVGs from `public/icons/`.
 const ChatGPTIcon = ({ size = 50 }: ToolSvgIconProps) => (
     <img
-        src="/icons/chatgpt.svg"
+        src="icons/chatgpt.svg"
         alt="ChatGPT"
         width={size}
         height={size}
@@ -34,7 +34,7 @@ const ChatGPTIcon = ({ size = 50 }: ToolSvgIconProps) => (
 
 const ClaudeIcon = ({ size = 50 }: ToolSvgIconProps) => (
     <img
-        src="/icons/claude.svg"
+        src="icons/claude.svg"
         alt="Claude AI"
         width={size}
         height={size}
