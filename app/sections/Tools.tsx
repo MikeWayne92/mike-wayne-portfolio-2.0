@@ -19,76 +19,28 @@ type ToolSvgIconProps = {
     size?: number;
 };
 
-// Simple, inline SVG icons so we can animate them via the existing `AnimatedTools`.
-// They intentionally accept a `size` prop (injected by `AnimatedTools`).
+// Small wrapper components so `AnimatedTools` can inject `size`
+// while we render your uploaded SVGs from `public/icons/`.
 const ChatGPTIcon = ({ size = 50 }: ToolSvgIconProps) => (
-    <svg
+    <img
+        src="/icons/chatgpt.svg"
+        alt="ChatGPT"
         width={size}
         height={size}
-        viewBox="0 0 256 256"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        focusable="false"
-    >
-        <path
-            d="M128 48c-52.8 0-96 34.4-96 76.8 0 25.4 15.5 48 39.6 62.7-1.7 8.2-6.7 26.4-15.1 34.8-2.2 2.2-.6 5.9 2.5 6.2 9.8.9 29.6-2.5 44.2-9.3 8.5 2.3 17.5 3.6 26.8 3.6 52.8 0 96-34.4 96-76.8S180.8 48 128 48Z"
-            fill="#E4DED7"
-            opacity="0.92"
-        />
-        <path
-            d="M93.5 128.2c0-6.6 5.4-12 12-12h49c6.6 0 12 5.4 12 12v.6c0 6.6-5.4 12-12 12h-49c-6.6 0-12-5.4-12-12v-.6Z"
-            fill="#0E1016"
-            opacity="0.9"
-        />
-        <circle cx="108" cy="127" r="10" fill="#0E1016" opacity="0.9" />
-        <circle cx="128" cy="127" r="10" fill="#0E1016" opacity="0.9" />
-        <circle cx="148" cy="127" r="10" fill="#0E1016" opacity="0.9" />
-        <path
-            d="M168 103c-12-10.6-26.8-16-40-16s-28 5.4-40 16"
-            stroke="#0E1016"
-            strokeWidth="10"
-            strokeLinecap="round"
-            opacity="0.85"
-        />
-    </svg>
+        className="h-full w-full object-contain"
+        draggable={false}
+    />
 );
 
 const ClaudeIcon = ({ size = 50 }: ToolSvgIconProps) => (
-    <svg
+    <img
+        src="/icons/claude.svg"
+        alt="Claude AI"
         width={size}
         height={size}
-        viewBox="0 0 256 256"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        focusable="false"
-    >
-        <path
-            d="M64 72c0-13.3 10.7-24 24-24h80c13.3 0 24 10.7 24 24v112c0 13.3-10.7 24-24 24H88c-13.3 0-24-10.7-24-24V72Z"
-            fill="#E4DED7"
-            opacity="0.92"
-        />
-        <path
-            d="M128 86c-24 0-44 19.7-44 44 0 24.3 20 44 44 44 24 0 44-19.7 44-44 0-24.3-20-44-44-44Z"
-            fill="#0E1016"
-            opacity="0.85"
-        />
-        {/* Infinity-ish mark */}
-        <path
-            d="M92 130c10-16 23-24 36-24 19 0 26 14 36 14s18-8 18-16"
-            stroke="#E4DED7"
-            strokeWidth="12"
-            strokeLinecap="round"
-        />
-        <path
-            d="M92 126c10 16 23 24 36 24 19 0 26-14 36-14s18 8 18 16"
-            stroke="#E4DED7"
-            strokeWidth="12"
-            strokeLinecap="round"
-        />
-        <circle cx="128" cy="128" r="10" fill="#E4DED7" opacity="0.9" />
-    </svg>
+        className="h-full w-full object-contain"
+        draggable={false}
+    />
 );
 
 const Tools = () => {
