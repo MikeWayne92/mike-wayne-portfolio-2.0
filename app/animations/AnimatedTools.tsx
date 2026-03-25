@@ -1,11 +1,12 @@
 import React, {cloneElement} from "react";
-import { IconType } from "react-icons";
 import Animated from "./Animated"; // Replace with the correct path to the "Animated" component
 
 type AnimatedToolsProps = {
     delay: number;
     stepSize: number;
-    children: React.ReactElement<React.ComponentProps<IconType>>[];
+    // React-icons icons accept a `size` prop; we also support custom SVG icons
+    // that implement the same optional contract.
+    children: React.ReactElement<{ size?: number }>[];
     iconSize: number;
     className?: string;
 };

@@ -1,7 +1,6 @@
 import React, { useEffect, Children } from "react";
 import { useAnimation, motion, Variants, Transition } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { IconType } from "react-icons";
 
 type AnimatedProps = {
     className?: string;
@@ -59,8 +58,6 @@ const Animated: React.FC<AnimatedProps> = ({
             transition={transition}
         >
             {Children.map(children, (child, index) => {
-                // Cast the child to an IconType to access the IconType properties
-                const icon = child as React.ReactElement<IconType>;
                 return (
                     <motion.div
                         key={index}
@@ -73,7 +70,7 @@ const Animated: React.FC<AnimatedProps> = ({
                         data-blobity-offset-y={15}
                         data-blobity-magnetic={false}
                     >
-                        {icon}
+                        {child}
                     </motion.div>
                 );
             })}
