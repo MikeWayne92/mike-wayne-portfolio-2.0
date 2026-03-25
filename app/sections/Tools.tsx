@@ -19,11 +19,13 @@ type ToolSvgIconProps = {
     size?: number;
 };
 
+const TOOL_ICON_VERSION = "20260325";
+
 // Small wrapper components so `AnimatedTools` can inject `size`
 // while we render your uploaded SVGs from `public/icons/`.
 const ChatGPTIcon = ({ size = 50 }: ToolSvgIconProps) => (
     <img
-        src="icons/chatgpt.svg"
+        src={`icons/chatgpt.svg?v=${TOOL_ICON_VERSION}`}
         alt="ChatGPT"
         // Let the container define size; SVGs can include extra whitespace
         // so we rely on `object-contain` to scale correctly inside the square.
@@ -36,7 +38,7 @@ const ChatGPTIcon = ({ size = 50 }: ToolSvgIconProps) => (
 
 const ClaudeIcon = ({ size = 50 }: ToolSvgIconProps) => (
     <img
-        src="icons/claude.svg"
+        src={`icons/claude.svg?v=${TOOL_ICON_VERSION}`}
         alt="Claude AI"
         // Claude's logo is wide; `object-cover` makes it fill the square cell
         // instead of shrinking down to a tiny centered strip.
