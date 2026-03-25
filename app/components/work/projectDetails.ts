@@ -95,4 +95,17 @@ export const projects = [
         image: "/projects/cafe-sales-dashboard.png",
         available: true,
     },
+    {
+        id: 5,
+        name: "Chocolate Business Analysis",
+        description:
+            "An interactive business intelligence report analyzing chocolate retail performance across stores, products, and customer segments. The dashboard highlights executive KPIs, channel mix, product portfolio trends, customer insights, and strategic findings in a polished single-page experience.",
+        technologies: [SiPython, SiChartdotjs, SiHtml5, SiCss3, SiJavascript, SiGithub],
+        techNames: ["Python", "Chart.js", "HTML5", "CSS3", "JavaScript", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://www.chartjs.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/chocolate-business-analysis",
+        demo: "https://mikewayne92.github.io/chocolate-business-analysis/",
+        image: "/projects/chocolate-business-analysis.png",
+        available: true,
+    },
 ];
