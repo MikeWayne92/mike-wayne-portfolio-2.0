@@ -25,9 +25,11 @@ const ChatGPTIcon = ({ size = 50 }: ToolSvgIconProps) => (
     <img
         src="icons/chatgpt.svg"
         alt="ChatGPT"
+        // Let the container define size; SVGs can include extra whitespace
+        // so we rely on `object-contain` to scale correctly inside the square.
         width={size}
         height={size}
-        className="h-full w-full object-contain"
+        className="h-full w-full object-contain object-center"
         draggable={false}
     />
 );
@@ -36,9 +38,11 @@ const ClaudeIcon = ({ size = 50 }: ToolSvgIconProps) => (
     <img
         src="icons/claude.svg"
         alt="Claude AI"
+        // Claude's logo is wide; `object-cover` makes it fill the square cell
+        // instead of shrinking down to a tiny centered strip.
         width={size}
         height={size}
-        className="h-full w-full object-contain"
+        className="h-full w-full object-cover object-center"
         draggable={false}
     />
 );
