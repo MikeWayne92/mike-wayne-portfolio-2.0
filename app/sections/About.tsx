@@ -22,19 +22,19 @@ const About = () => {
                 <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
                     <div className="flex w-[100%] flex-col gap-6 text-[18px] font-medium leading-relaxed tracking-wide text-[#e4ded7] md:gap-8 md:text-[20px] md:leading-relaxed lg:gap-10 lg:max-w-[90%] lg:text-[24px]">
                         <AnimatedBody 
-                            text="I'm Michael Collins or MikeWayne, I'm a Data Operations Analyst with 3+ years of experience turning raw data into clear, actionable insights that fuel smarter decisions for both people and AI systems." 
+                            text="I'm Michael Collins or MikeWayne, I'm a Data Operations Analyst with 3+ years of experience specializing in operations management, business analysis, AI implementation, and data-driven operations. Focused on turning complex data into clear, strategic insights that drive smarter decision-making." 
                             className="opacity-90"
                         />
 
                         <AnimatedBody
                             delay={0.1}
-                            text="By day, I support Trust & Safety initiatives at Google (via GlobalLogic), where I lead annotation and evaluation efforts to improve large-scale AI models. My work has helped reduce QA errors by 20%, streamline workflows with new SOPs, and deliver critical datasets under high-pressure deadlines."
+                            text="Proficient in SQL, Python, and Power BI, with a strong ability to transform raw datasets into actionable insights. Experienced in building data workflows, dashboards, and reporting systems that support operational visibility and performance tracking."
                             className="opacity-80"
                         />
 
                         <AnimatedBody
                             delay={0.2}
-                            text="By night (and weekends), I dive into personal projects that combine curiosity, code, and storytelling from sales trend dashboards to 3D population density maps. These projects keep me learning, building, and exploring new ways to visualize the world through data."
+                            text="Proven track record of improving operational efficiency by optimizing workflows, enhancing data processing, and reducing error rates. Skilled in implementing rigorous validation processes and developing SOPs to ensure accuracy, consistency, and scalability."
                             className="opacity-80"
                         />
 
