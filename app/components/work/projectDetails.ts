@@ -32,15 +32,15 @@ export type ProjectProps = {
 export const projects = [
     {
         id: 0,
-        name: "Spotify by the Numbers",
+        name: "Chocolate Business Analysis",
         description:
-            "A sleek, interactive dashboard for visualizing your Spotify listening history. Upload your Spotify data and get beautiful visualizations of your listening habits, including top artists, tracks, and listening patterns.",
-        technologies: [SiReact, SiTypescript, SiTailwindcss, SiFramer, SiVite, SiChartdotjs, SiGithub],
-        techNames: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Chart.js", "GitHub"],
-        techLinks: ["https://reactjs.org/", "https://www.typescriptlang.org/", "https://tailwindcss.com/", "https://www.framer.com/motion/", "https://vitejs.dev/", "https://www.chartjs.org/", "https://github.com/"],
-        github: "https://github.com/MikeWayne92/Spotify-by-the-numbers",
-        demo: "https://mikewayne92.github.io/Spotify-by-the-numbers/",
-        image: "/projects/spotifydash.png",
+            "An interactive business intelligence report analyzing chocolate retail performance across stores, products, and customer segments. The dashboard highlights executive KPIs, channel mix, product portfolio trends, customer insights, and strategic findings in a polished single-page experience.",
+        technologies: [SiPython, SiChartdotjs, SiHtml5, SiCss3, SiJavascript, SiGithub],
+        techNames: ["Python", "Chart.js", "HTML5", "CSS3", "JavaScript", "GitHub"],
+        techLinks: ["https://www.python.org/", "https://www.chartjs.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/chocolate-business-analysis",
+        demo: "https://mikewayne92.github.io/chocolate-business-analysis/",
+        image: "/projects/chocolate-business-analysis.png",
         available: true,
     },
     {
@@ -97,15 +97,15 @@ export const projects = [
     },
     {
         id: 5,
-        name: "Chocolate Business Analysis",
+        name: "Spotify by the Numbers",
         description:
-            "An interactive business intelligence report analyzing chocolate retail performance across stores, products, and customer segments. The dashboard highlights executive KPIs, channel mix, product portfolio trends, customer insights, and strategic findings in a polished single-page experience.",
-        technologies: [SiPython, SiChartdotjs, SiHtml5, SiCss3, SiJavascript, SiGithub],
-        techNames: ["Python", "Chart.js", "HTML5", "CSS3", "JavaScript", "GitHub"],
-        techLinks: ["https://www.python.org/", "https://www.chartjs.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "https://github.com/"],
-        github: "https://github.com/MikeWayne92/chocolate-business-analysis",
-        demo: "https://mikewayne92.github.io/chocolate-business-analysis/",
-        image: "/projects/chocolate-business-analysis.png",
+            "A sleek, interactive dashboard for visualizing your Spotify listening history. Upload your Spotify data and get beautiful visualizations of your listening habits, including top artists, tracks, and listening patterns.",
+        technologies: [SiReact, SiTypescript, SiTailwindcss, SiFramer, SiVite, SiChartdotjs, SiGithub],
+        techNames: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Chart.js", "GitHub"],
+        techLinks: ["https://reactjs.org/", "https://www.typescriptlang.org/", "https://tailwindcss.com/", "https://www.framer.com/motion/", "https://vitejs.dev/", "https://www.chartjs.org/", "https://github.com/"],
+        github: "https://github.com/MikeWayne92/Spotify-by-the-numbers",
+        demo: "https://mikewayne92.github.io/Spotify-by-the-numbers/",
+        image: "/projects/spotifydash.png",
         available: true,
     },
 ];
