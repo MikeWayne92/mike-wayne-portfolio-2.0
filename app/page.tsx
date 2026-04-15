@@ -17,6 +17,8 @@ import Footer from "./sections/Footer";
 import Tools from "./sections/Tools";
 import FloatingButton from "./components/buttons/FloatingButton";
 
+import Certifications from "./components/Certifications";
+
 export default function Home() {
 
     const [, setIsMobile] = useState(false);
@@ -69,6 +71,7 @@ export default function Home() {
                 <Work />
                 <Tools />
                 <FloatingButton />
+                <Certifications />
                 <Contact />
                 <Footer />
             </main>
