@@ -61,6 +61,33 @@ const About = () => {
                             text="Superpowers: Curiosity-fueled, systems thinker, highly adaptable and always pushing to get 1% better; Daily."
                             className="opacity-80 ml-4"
                         />
+
+                        <AnimatedBody
+                            delay={0.7}
+                            text="Certifications"
+                            className="opacity-90 font-bold mt-4"
+                        />
+
+                        <div className="flex flex-col gap-4 ml-4 mt-2">
+                            <a
+                                href="https://www.credly.com/badges/6ed5df84-aa41-4185-a1fe-797b00f78420/public_url"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium transition-all duration-300 w-fit opacity-80 hover:opacity-100"
+                            >
+                                <span>🏆</span>
+                                Google Data Analytics Professional Certificate
+                            </a>
+                            <a
+                                href="https://www.credly.com/badges/e432a10d-c3d5-45dd-b92c-6ff762729bf6/public_url"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-medium transition-all duration-300 w-fit opacity-80 hover:opacity-100"
+                            >
+                                <span>🤖</span>
+                                Google AI Professional Certificate
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
