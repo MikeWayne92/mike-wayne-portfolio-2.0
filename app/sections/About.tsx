@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
@@ -77,12 +76,18 @@ const About = () => {
                                 className="inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
                                 title="Google Data Analytics Professional Certificate"
                             >
-                                <Image
-                                    src="/certifications/google-data-analytics-badge.png"
+                                <img
+                                    src="./certifications/google-data-analytics-badge.png"
                                     alt="Google Data Analytics Professional Certificate"
-                                    width={128}
-                                    height={128}
-                                    className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                    loading="lazy"
+                                    style={{
+                                        width: '128px',
+                                        height: '128px',
+                                        borderRadius: '0.5rem',
+                                        opacity: 0.9,
+                                    }}
+                                    onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+                                    onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.9')}
                                 />
                             </a>
                             <a
@@ -92,12 +97,18 @@ const About = () => {
                                 className="inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
                                 title="Google AI Professional Certificate"
                             >
-                                <Image
-                                    src="/certifications/google-ai-badge.png"
+                                <img
+                                    src="./certifications/google-ai-badge.png"
                                     alt="Google AI Professional Certificate"
-                                    width={128}
-                                    height={128}
-                                    className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                    loading="lazy"
+                                    style={{
+                                        width: '128px',
+                                        height: '128px',
+                                        borderRadius: '0.5rem',
+                                        opacity: 0.9,
+                                    }}
+                                    onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+                                    onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.9')}
                                 />
                             </a>
                         </div>
