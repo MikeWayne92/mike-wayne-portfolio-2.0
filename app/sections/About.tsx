@@ -68,24 +68,32 @@ const About = () => {
                             className="opacity-90 font-bold mt-4"
                         />
 
-                        <div className="flex flex-col gap-4 ml-4 mt-2">
+                        <div className="flex flex-wrap gap-6 ml-4 mt-4">
                             <a
                                 href="https://www.credly.com/badges/6ed5df84-aa41-4185-a1fe-797b00f78420/public_url"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium transition-all duration-300 w-fit opacity-80 hover:opacity-100"
+                                className="inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                                title="Google Data Analytics Professional Certificate"
                             >
-                                <span>🏆</span>
-                                Google Data Analytics Professional Certificate
+                                <img
+                                    src="/certifications/google-data-analytics-badge.png"
+                                    alt="Google Data Analytics Professional Certificate"
+                                    className="w-32 h-auto rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                />
                             </a>
                             <a
                                 href="https://www.credly.com/badges/e432a10d-c3d5-45dd-b92c-6ff762729bf6/public_url"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-medium transition-all duration-300 w-fit opacity-80 hover:opacity-100"
+                                className="inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                                title="Google AI Professional Certificate"
                             >
-                                <span>🤖</span>
-                                Google AI Professional Certificate
+                                <img
+                                    src="/certifications/google-ai-badge.png"
+                                    alt="Google AI Professional Certificate"
+                                    className="w-32 h-auto rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                />
                             </a>
                         </div>
                     </div>
