@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
@@ -76,10 +77,12 @@ const About = () => {
                                 className="inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
                                 title="Google Data Analytics Professional Certificate"
                             >
-                                <img
+                                <Image
                                     src="/certifications/google-data-analytics-badge.png"
                                     alt="Google Data Analytics Professional Certificate"
-                                    className="w-32 h-auto rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                    width={128}
+                                    height={128}
+                                    className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
                                 />
                             </a>
                             <a
@@ -89,10 +92,12 @@ const About = () => {
                                 className="inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
                                 title="Google AI Professional Certificate"
                             >
-                                <img
+                                <Image
                                     src="/certifications/google-ai-badge.png"
                                     alt="Google AI Professional Certificate"
-                                    className="w-32 h-auto rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                    width={128}
+                                    height={128}
+                                    className="rounded-lg opacity-90 hover:opacity-100 transition-opacity duration-300"
                                 />
                             </a>
                         </div>
